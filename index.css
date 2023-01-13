@@ -1,0 +1,34 @@
+html {
+    background-color: #24273a;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    color: #c29df1;
+}
+
+a:hover {
+    color: #f3bce6;
+}
+
+Header {
+    background-color: #131020;
+    padding: 1em;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding-left: none;
+}
+
+.navbarItem {
+    padding-right: 1em;
+    padding-left: -1em;
+    float: left;
+    background-color: #131020;
+}
