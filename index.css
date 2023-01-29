@@ -4,22 +4,102 @@ body {
   background-color: #1a1823 !important;
 }
 
-.typewriter h1 {
-    color: 	#c29df1;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #f3bce6; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .10em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
+.caret {
+  border-right: .15em solid #c29df1; /* The typwriter cursor */
+  animation: blink 0.8s linear infinite;
+}
+
+.typewriterHome {
+  color: #c29df1;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .06em; /* Adjust as needed */
+}
+.typewriterHome::before {
+  content: "home";
+  animation: typeHome 1s;
+}
+
+.typewriterCoding {
+  color: #c29df1;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .06em; /* Adjust as needed */
+}
+.typewriterCoding::before {
+  content: "coding";
+  animation: typeCoding 1s;
+}
+
+.typewriterMusic {
+  color: #c29df1;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .06em; /* Adjust as needed */
+}
+.typewriterMusic::before {
+  content: "music";
+  animation: typeMusic 1s;
+}
+
+.typewriterAbout {
+  color: #c29df1;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .06em; /* Adjust as needed */
+}
+.typewriterAbout::before {
+  content: "about_me";
+  animation: typeAbout 1s;
+}
+
+/* The typing effect */
+
+@keyframes typeHome {
+  0% { content: ""; }
+  25% { content: "h"; }
+  50% { content: "ho"; }
+  75% { content: "hom"; }
+  100% { content: "home"; }
+}
+
+@keyframes typeCoding {
+  0% { content: ""; }
+  16.6% { content: "c"; }
+  33.3% { content: "co"; }
+  50% { content: "cod"; }
+  66.6% { content: "codi"; }
+  83.3% { content: "codin"; }
+  100% { content: "coding"; }
+}
+@keyframes typeMusic {
+  0% { content: ""; }
+  20% { content: "m"; }
+  40% { content: "mu"; }
+  60% { content: "mus"; }
+  80% { content: "musi"; }
+  100% { content: "music"; }
+}
+@keyframes typeAbout {
+  0% { content: ""; }
+  12.5% { content: "a"; }
+  25% { content: "ab"; }
+  37.5% { content: "abo"; }
+  50% { content: "abou"; }
+  62.5% { content: "about"; }
+  75% { content: "about_"; }
+  87.5% { content: "about_m"; }
+  100% { content: "about_me"; }
 }
 
 /* The typewriter cursor effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #f3bce6; }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 code {
