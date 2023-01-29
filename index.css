@@ -25,3 +25,8 @@ body {
 code {
     font-size: larger !important;
 }
+
+.nav-item>.active {
+  color: #f3bce6 !important;
+  text-decoration: underline !important;
+}
