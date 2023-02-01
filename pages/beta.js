@@ -15,14 +15,15 @@ function trigger() {
 
 function action() {
     let command = document.getElementById("termInput").value.split(" ");
-    if (command[0] == "goto") {
+    if (command[0] == "goto" || command[0] == "cd") {
         return showContent(command[1]);
     }
     else if (command[0] == "help") {
         return "i am a terminal. you give me commands, i do something... i guess \n try 'man' to get a list of commands!";
     } else if (command[0] == "toggleMode") {
-        makeRoom();
-        return "dont";
+        clearTerminal();
+        alert("dont");
+        return "...";
     } else if (command[0] == "man") {
         return "here is a list of commands: \n - help: shows you what this is \n - man: shows all the commands available \n - goto xyz: show the page 'xyz' \n - ls: list all pages \n - toggleMode: toggles darkmode/whitemode";
     } else if (command[0] == "uwu" || command[0] == "UwU") {
@@ -31,6 +32,8 @@ function action() {
         return "home coding music about_me beta";
     } else if (command[0] == "die") {
         return "qwq why you so mean";
+    } else if (command[0] == "neofetch") {
+        return neofetch();
     }
     else {
         return errorMessage();
@@ -47,6 +50,18 @@ function makeRoom() {
     document.getElementById("o4").innerText = document.getElementById("o3").innerText;
     document.getElementById("o3").innerText = document.getElementById("o2").innerText;
     document.getElementById("o2").innerText = document.getElementById("o1").innerText;
+}
+
+function clearTerminal() {
+    document.getElementById("o9").innerText = "";
+    document.getElementById("o8").innerText = "";
+    document.getElementById("o7").innerText = "";
+    document.getElementById("o6").innerText = "";
+    document.getElementById("o5").innerText = "";
+    document.getElementById("o4").innerText = "";
+    document.getElementById("o3").innerText = "";
+    document.getElementById("o2").innerText = "";
+    document.getElementById("o1").innerText = "";
 }
 
 function showContent(content) {
@@ -75,4 +90,9 @@ function errorMessage() {
     } else if (x <= 100) {
         return "try using 'help'!";
     }
+}
+
+function neofetch() {
+
+    return "hi :3";
 }
