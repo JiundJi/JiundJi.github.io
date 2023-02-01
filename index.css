@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
 
 body {
-  background-color: #1a1823 !important;
+  background-color: #131020 !important;
+  scrollbar-color: #24273a #131020;
+}
+::-webkit-scrollbar {
+  background-color: #202224 !important;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a !important;
 }
 
 .caret {
@@ -114,4 +122,46 @@ p {
 .nav-item>.active {
   color: #f3bce6 !important;
   text-decoration: underline !important;
+}
+
+
+#termInput {
+  background-color: transparent;
+  border: 1px #c29df1 solid;
+  color: #f3bce6;
+  width: 80%;
+  height: 2em;
+  font-family: 'Inconsolata', monospace;
+}
+#termInput:focus {
+  outline: none;
+}
+
+#enterKey {
+  float: right; 
+  width: 15%;
+  background-color: #24273a;
+  color: #f3bce6;
+  border: 0;
+}
+
+#termOutput {
+  list-style: none;
+}
+
+#termOutput li {
+  color: #c29df1;
+  font-size: x-large;
+  margin: 3%;
+}
+
+#o1 {
+  font-size: xx-large !important;
+  color: #f3bce6 !important;
+  margin-bottom: 5%;
+}
+
+#content object {
+  border: 2px #f3bce6 solid;
+  width: 100%;
 }
