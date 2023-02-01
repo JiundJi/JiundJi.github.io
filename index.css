@@ -29,6 +29,18 @@ body {
   animation: typeHome 1s;
 }
 
+.typewriterBeta {
+  color: #c29df1;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .06em; /* Adjust as needed */
+}
+.typewriterBeta::before {
+  content: "beta";
+  animation: typeBeta 1s;
+}
+
 .typewriterCoding {
   color: #c29df1;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -73,6 +85,14 @@ body {
   50% { content: "ho"; }
   75% { content: "hom"; }
   100% { content: "home"; }
+}
+
+@keyframes typeBeta {
+  0% { content: ""; }
+  25% { content: "b"; }
+  50% { content: "be"; }
+  75% { content: "bet"; }
+  100% { content: "beta"; }
 }
 
 @keyframes typeCoding {
