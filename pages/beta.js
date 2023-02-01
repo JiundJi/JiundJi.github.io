@@ -1,14 +1,3 @@
-/* 
-var input = document.getElementById("input");
-
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("enterKey").click();
-  }
-}); 
-*/
-
 function init() {
     document.getElementById("o1").innerText = "Enter 'help' for help!";
 }
@@ -35,8 +24,15 @@ function action() {
         makeRoom();
         return "dont";
     } else if (command[0] == "commands") {
-        return "here is a list of commands: \n - help: shows you what this is \n - commands: shows all the commands available \n - goto xyz: show the page 'xyz' \n - toggleMode: toggles darkmode/whitemode";
-    } else {
+        return "here is a list of commands: \n - help: shows you what this is \n - commands: shows all the commands available \n - goto xyz: show the page 'xyz' \n - ls: list all pages \n - toggleMode: toggles darkmode/whitemode";
+    } else if (command[0] == "uwu" || command[0] == "UwU") {
+        return "UwU";
+    } else if (command[0] == "ls") {
+        return "home coding music about_me beta";
+    } else if (command[0] == "die") {
+        return "qwq why you so mean";
+    }
+    else {
         return errorMessage();
     }
     
@@ -60,6 +56,7 @@ function showContent(content) {
         case "coding": document.getElementById("content").innerHTML='<object type="text/html" data="../pages/coding.html" ></object>'; break;
         case "about_me": document.getElementById("content").innerHTML='<object type="text/html" data="../pages/about_me.html" ></object>'; break;
         case "music": document.getElementById("content").innerHTML='<object type="text/html" data="../pages/music.html" ></object>'; break;
+        case "beta": return "you're already here bruh";
         default: return "an error has occured. check for spelling";
     }
 
