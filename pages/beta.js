@@ -34,6 +34,8 @@ function action() {
         return "qwq why you so mean";
     } else if (command[0] == "neofetch") {
         return neofetch();
+    } else if (command[0] == "clear" || command[0] == "cls") {
+        return clearTerminal();
     }
     else {
         return errorMessage();
