@@ -19,12 +19,12 @@ function action() {
         return showContent(command[1]);
     }
     else if (command[0] == "help") {
-        return "i am a terminal. you give me commands, i do something... i guess \n try 'commands' to get a list of commands!";
+        return "i am a terminal. you give me commands, i do something... i guess \n try 'man' to get a list of commands!";
     } else if (command[0] == "toggleMode") {
         makeRoom();
         return "dont";
-    } else if (command[0] == "commands") {
-        return "here is a list of commands: \n - help: shows you what this is \n - commands: shows all the commands available \n - goto xyz: show the page 'xyz' \n - ls: list all pages \n - toggleMode: toggles darkmode/whitemode";
+    } else if (command[0] == "man") {
+        return "here is a list of commands: \n - help: shows you what this is \n - man: shows all the commands available \n - goto xyz: show the page 'xyz' \n - ls: list all pages \n - toggleMode: toggles darkmode/whitemode";
     } else if (command[0] == "uwu" || command[0] == "UwU") {
         return "UwU";
     } else if (command[0] == "ls") {
