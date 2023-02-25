@@ -134,7 +134,7 @@ a {
 }
 
 code {
-    font-size: larger !important;
+  font-size: larger !important;
 }
 
 ul {
@@ -158,6 +158,14 @@ p {
   background-color: #24273a !important;
 }
 
+.visit-button {
+  background-color: #a788d0;
+  color: #fff !important;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 1% 0;
+}
 
 #webpagesContainer {
   border: #24273a solid 1px;
