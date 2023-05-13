@@ -18,6 +18,10 @@ body {
   display: block;
 }
 
+#widget {
+  background-color: #131020 !important;
+}
+
 .caret {
   border-right: .15em solid #c29df1; /* The typwriter cursor */
   animation: blink 0.8s linear infinite;
