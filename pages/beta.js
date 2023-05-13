@@ -18,7 +18,7 @@ function action() {
     if (command[0] == "goto" || command[0] == "cd") {
         return showContent(command[1]);
     }
-    else if (command[0] == "help") {
+    else if (command[0] === "help") {
         return "i am a terminal. you give me commands, i do something... i guess \n try 'man' to get a list of commands!";
     } else if (command[0] == "toggleMode") {
         clearTerminal();
@@ -26,16 +26,21 @@ function action() {
         return "...";
     } else if (command[0] == "man") {
         return "here is a list of commands: \n - help: shows you what this is \n - man: shows all the commands available \n - goto xyz: show the page 'xyz' \n - ls: list all pages \n - toggleMode: toggles darkmode/whitemode";
-    } else if (command[0] == "uwu" || command[0] == "UwU") {
+    } else if (command[0] === "uwu") {
         return "UwU";
     } else if (command[0] == "ls") {
         return "home coding music about_me beta";
-    } else if (command[0] == "die") {
+    } else if (command[0] === "die") {
         return "qwq why you so mean";
     } else if (command[0] == "neofetch") {
         return neofetch();
     } else if (command[0] == "clear" || command[0] == "cls") {
         return clearTerminal();
+    } else if (command[0] === "owo") {
+        return "OwO";
+    } else if (command[0] === "back") {
+        window.open('../index.html', '_self');
+        return;
     }
     else {
         return errorMessage();
@@ -95,6 +100,16 @@ function errorMessage() {
 }
 
 function neofetch() {
+    let foo = "\n";
+    foo += "kitty@jiundji.me\n";
+    foo += "--------------------\n";
+    foo += "OS: Arch Linux\n";
+    foo += "Kernel: cat uwu\n";
+    foo += "Shell: omz\n";
+    foo += "WM: i3\n";
+    foo += "Terminal: kitty\n";
+    foo += "CPU: kitty breincell (1) @ 1mHz\n";
+    foo += "Memory: uhh i forgor qwq\n";
 
-    return "hi :3";
+    return foo;
 }
