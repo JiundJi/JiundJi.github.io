@@ -11,6 +11,12 @@ body {
   background: #1a1a1a !important;
 }
 
+.myicon {
+  color: #f9d8f2; 
+  font-size: 32px; 
+  display: block;
+}
+
 .caret {
   border-right: .15em solid #c29df1; /* The typwriter cursor */
   animation: blink 0.8s linear infinite;
@@ -213,3 +219,4 @@ p {
   width: 100%;
   height: 50em;
 }
+
